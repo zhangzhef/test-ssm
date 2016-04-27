@@ -1,0 +1,14 @@
+package com.cn.test.service.impl;
+
+import com.cn.test.pojo.User;
+import com.cn.test.service.IUserService;
+
+public class IUserServiceImple implements IUserService {
+
+	@Override
+	public User getUserById(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="MyBatisTest.test1" project="ssm_base" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testcase name="test1" classname="com.test.MyBatisTest" time="3.05">
+    <error>org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)&#13;
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:243)&#13;
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)&#13;
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:589)&#13;
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:273)&#13;
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:168)&#13;
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:356)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)&#13;
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)&#13;
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)&#13;
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:205)&#13;
+	... 25 more&#13;
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)&#13;
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)&#13;
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1127)&#13;
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:356)&#13;
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2502)&#13;
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2539)&#13;
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2321)&#13;
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:832)&#13;
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)&#13;
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)&#13;
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)&#13;
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)&#13;
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)&#13;
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)&#13;
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)&#13;
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)&#13;
+	... 27 more&#13;
+Caused by: java.net.ConnectException: Connection refused: connect&#13;
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)&#13;
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)&#13;
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)&#13;
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)&#13;
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)&#13;
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)&#13;
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)&#13;
+	at java.net.Socket.connect(Socket.java:579)&#13;
+	at java.net.Socket.connect(Socket.java:528)&#13;
+	at java.net.Socket.&lt;init&gt;(Socket.java:425)&#13;
+	at java.net.Socket.&lt;init&gt;(Socket.java:241)&#13;
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)&#13;
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:306)&#13;
+	... 43 more&#13;
+&#13;
+</error>
+  </testcase>
+</testrun>
